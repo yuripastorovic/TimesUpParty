@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,7 +13,7 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Partida extends AppCompatActivity implements DynamicCountdownTimer.TimerCallback{
+public class Partida extends AppCompatActivity {
     private static int order = 0;
     String equipo1;
     String equipo2;
@@ -23,8 +25,6 @@ public class Partida extends AppCompatActivity implements DynamicCountdownTimer.
     int fallos=0;
     Button fallo;
     Button acierto;
-
-    private DynamicCountdownTimer pCountDownTimer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,42 +43,18 @@ public class Partida extends AppCompatActivity implements DynamicCountdownTimer.
             turno.setText(equipo2);
         }
         order++;
-        pCountDownTimer = new DynamicCountdownTimer(this);
-        new Thread(pCountDownTimer).start();
     }
     public void setFallo(View view){
-        pCountDownTimer.resta();
-        fallos++;
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                //timmer.resta();  // Resta 15 segundos
+                fallos++;
+            }
+        });
     }
     public void setAcierto(View view){
         aciertos++;
-    }
-    @Override
-    public void onTimerTick(/* tiempo restante */) {
-        // Actualiza la interfaz de usuario con el tiempo restante
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                time.setText(""+(tiempo/1000));
-            }
-        });
-    }
-
-    @Override
-    public void onTimerFinish() {
-        // Lógica para manejar la finalización del temporizador
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                time.setText("END");
-                Bundle extras = new Bundle();
-                extras.putInt("aciertos", aciertos);
-                extras.putInt("fallos", fallos);
-                Intent ronda = new Intent(Partida.this, PostRonda.class);
-                ronda.putExtras(extras);
-                startActivity(ronda);
-            }
-        });
     }
 }
 

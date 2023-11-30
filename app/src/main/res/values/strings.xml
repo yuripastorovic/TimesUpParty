@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">TimesUpParty</string>
+    <string name="jugar">Jugar</string>
+    <string name="atras">Atras</string>
+    <string name="info">Informacion</string>
+    <string name="bio">Wikia</string>
+    <string name="settings">Settings</string>
+    <string name="exp0">Dividios en dos equipos para empezar a jugar.\nJugaremos con 40 cartas, el equipo que más aciertos obtenga\nserá el equipo ganador.</string>
+    <string name="tit1">RONDA 1</string>
+    <string name="exp1">Durante esta ronda describiras las tarjetas sin limites,\npor cada tarjeta que pases pierdes 15s.</string>
+    <string name="tit2">RONDA 2</string>
+    <string name="exp2">Durante esta ronda describiras las tarjetas con solo una palabra,\nse trata de la ronda "password".</string>
+    <string name="tit3">RONDA 3</string>
+    <string name="exp3">Durante esta ronda describiras las tarjetas solo con mimica,\ntambien te puedes tararear.</string>
+    <string name="pregunta">¿EMPEZAMOS?</string>
+    <string name="start">START</string>
+    <string name="equi1">EQUIPO 1</string>
+    <string name="equi2">EQUIPO 2</string>
+    <string name="comienza">Comienza el EQUIPO 1</string>
+    <string name="expli">Introducir el nombre del equipo</string>
+    <string name="turno">TURNO DE:</string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
 </resources>

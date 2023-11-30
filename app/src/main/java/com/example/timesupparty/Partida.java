@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
@@ -20,11 +21,14 @@ public class Partida extends AppCompatActivity {
     TextView turno;
     TextView pregunta;
     public static TextView time;
-    public static int tiempo=30000;
-    int aciertos=0;
-    int fallos=0;
+    public static int tiempo = 30000;
+    int aciertos = 0;
+    int fallos = 0;
     Button fallo;
     Button acierto;
+    CountDownTimer conta;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,17 +47,37 @@ public class Partida extends AppCompatActivity {
             turno.setText(equipo2);
         }
         order++;
+        contador(tiempo);
     }
-    public void setFallo(View view){
-        runOnUiThread(new Runnable() {
+    public void contador(long inicio){
+        conta= new CountDownTimer(inicio, 1000){
             @Override
-            public void run() {
-                //timmer.resta();  // Resta 15 segundos
-                fallos++;
+            public void onTick(long l) {
+                time.setText(""+l/1000);
+                tiempo = (int)l;
             }
-        });
+
+            @Override
+            public void onFinish() {
+                migracion();
+            }
+        }.start();
     }
-    public void setAcierto(View view){
+    public void setFallo(View view) {
+        fallos++;
+        conta.cancel();
+        contador(tiempo-15000);
+
+    }
+    public void migracion(){
+        Bundle extras = new Bundle();
+        extras.putInt("aciertos", aciertos);
+        extras.putInt("fallos", fallos);
+        Intent ronda = new Intent(this, PostRonda.class);
+        ronda.putExtras(extras);
+        startActivity(ronda);
+    }
+    public void setAcierto(View view) {
         aciertos++;
     }
 }

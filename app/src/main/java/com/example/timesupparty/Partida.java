@@ -3,6 +3,7 @@ package com.example.timesupparty;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -16,18 +17,15 @@ import java.util.TimerTask;
 
 public class Partida extends AppCompatActivity {
     private static int order = 0;
-    String equipo1;
-    String equipo2;
-    TextView turno;
-    TextView pregunta;
+    private String equipo1, equipo2;
+    private TextView turno, pregunta;
+    private Button fallo, acierto;
+    private CountDownTimer conta;
+    private MediaPlayer fondo, add, fail;
     public static TextView time;
     public static int tiempo = 30000;
-    int aciertos = 0;
-    int fallos = 0;
-    Button fallo;
-    Button acierto;
-    CountDownTimer conta;
-
+    public static int aciertos = 0;
+    public static int fallos = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +39,9 @@ public class Partida extends AppCompatActivity {
         time.setText("30");
         fallo = findViewById(R.id.fallo);
         acierto = findViewById(R.id.acierto);
+        fondo = MediaPlayer.create(this, R.raw.tic_tac);
+        fail = MediaPlayer.create(this, R.raw.fail);
+        fondo.start();
         if (order % 2 == 0) {
             turno.setText(equipo1);
         } else {
@@ -65,6 +66,7 @@ public class Partida extends AppCompatActivity {
     }
     public void setFallo(View view) {
         fallos++;
+        fail.start();
         conta.cancel();
         contador(tiempo-15000);
 
@@ -74,6 +76,7 @@ public class Partida extends AppCompatActivity {
         extras.putInt("aciertos", aciertos);
         extras.putInt("fallos", fallos);
         Intent ronda = new Intent(this, PostRonda.class);
+        fondo.stop();
         ronda.putExtras(extras);
         startActivity(ronda);
     }

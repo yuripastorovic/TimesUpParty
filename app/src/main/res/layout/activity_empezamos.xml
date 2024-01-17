@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Empezamos"
-    android:background="#FAE02A">
+    android:background="@color/yellow"
+    tools:context=".Empezamos">
 
     <TextView
         android:id="@+id/textView10"
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/expli"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,6 +26,8 @@
         android:layout_marginTop="200dp"
         android:onClick="jugar"
         android:text="@string/start"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/equipo2" />
@@ -38,6 +41,7 @@
         android:hint="@string/equi1"
         android:inputType="text"
         android:minHeight="48dp"
+        android:textColor="@color/smoothBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -51,6 +55,7 @@
         android:hint="@string/equi2"
         android:inputType="text"
         android:minHeight="48dp"
+        android:textColor="@color/smoothBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/equipo1" />
@@ -61,6 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/app_name"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -72,6 +78,7 @@
         android:layout_marginTop="32dp"
         android:onClick="jugar"
         android:text="@string/comienza"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/equipo2" />

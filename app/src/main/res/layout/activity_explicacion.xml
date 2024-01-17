@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Explicacion"
-    android:background="#FAE02A">
+    android:background="@color/yellow">
 
     <TextView
         android:id="@+id/textView2"
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/app_name"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/tit1"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -35,6 +37,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/exp1"
         android:textAlignment="center"
+        android:textColor="@color/smoothBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -45,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/tit2"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -56,6 +60,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/exp2"
         android:textAlignment="center"
+        android:textColor="@color/smoothBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -66,6 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/tit3"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,6 +84,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/exp3"
         android:textAlignment="center"
+        android:textColor="@color/smoothBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -89,6 +96,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/exp0"
         android:textAlignment="center"
+        android:textColor="@color/smoothBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -101,6 +109,8 @@
         android:layout_marginTop="64dp"
         android:onClick="volver"
         android:text="@string/atras"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/purple"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -112,6 +122,8 @@
         android:layout_marginEnd="100dp"
         android:onClick="jugar"
         android:text="@string/jugar"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 </androidx.constraintlayout.widget.ConstraintLayout>

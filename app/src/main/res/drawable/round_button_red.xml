@@ -5,7 +5,7 @@
             android:shape= "oval">
             <solid android:color="@color/smoothOrange"/>
             <corners android:radius="10dp"/> <!--border radius del selector-->
-            <stroke android:color="@color/magenta" android:width="5dp"/> <!--margin selector-->
+            <stroke android:color="@color/darkWhite" android:width="15dp"/> <!--margin selector-->
             <size android:width="100dp" android:height="100dp"/>
         </shape>
     </item>
@@ -14,7 +14,7 @@
             android:shape= "oval">
             <solid android:color="@color/magenta"/>
             <corners android:radius="10dp"/> <!--border radius del selector-->
-            <stroke android:color="@color/smoothOrange" android:width="5dp"/> <!--margin selector-->
+            <stroke android:color="@color/darkWhite" android:width="15dp"/> <!--margin selector-->
             <size android:width="100dp" android:height="100dp"/>
         </shape>
     </item>

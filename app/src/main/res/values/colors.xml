@@ -8,6 +8,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#F7CF02</color>
     <color name="darkYellow">#c09a02</color>
+    <color name="purpleBG">#5710c9</color>
+    <color name="buttonColor">#de2986</color>
     <color name="purple">#af02f7</color>
     <color name="purpleOld">#cf02f7</color>
     <color name="smoothOrange">#c03b02</color>
@@ -15,7 +17,7 @@
     <color name="cian">#02f7cf</color>
     <color name="blue">#0233f5</color>
     <color name="lighterGreen">#9EDA93</color>
-    <color name="green">#02f506</color>
+    <color name="green">#01bf41</color>
     <color name="smoothGreen">#87c002</color>
     <color name="smoothGreenMore">#67d002</color>
     <color name="lightGreen">#02f54b</color>

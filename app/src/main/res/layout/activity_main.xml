@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/smoothGreenMore"
+    android:background="@color/purpleBG"
     tools:context=".MainActivity">
 
     <TableLayout
@@ -31,7 +31,7 @@
                 android:shadowDy="20"
                 android:shadowRadius="20"
                 android:text="@string/bio"
-                android:textColor="@color/purple"
+                android:textColor="@color/darkWhite"
                 android:textSize="24sp" />
 
             <Button
@@ -44,7 +44,7 @@
                 android:shadowDy="20"
                 android:shadowRadius="20"
                 android:text="@string/info"
-                android:textColor="@color/purple"
+                android:textColor="@color/darkWhite"
                 android:textSize="24sp" />
 
             <Button
@@ -57,7 +57,7 @@
                 android:shadowDy="20"
                 android:shadowRadius="20"
                 android:text="@string/settings"
-                android:textColor="@color/purple"
+                android:textColor="@color/darkWhite"
                 android:textSize="24sp" />
         </TableRow>
 
@@ -74,7 +74,7 @@
         android:shadowDy="20"
         android:shadowRadius="20"
         android:text="@string/jugar"
-        android:textColor="@color/purple"
+        android:textColor="@color/darkWhite"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"

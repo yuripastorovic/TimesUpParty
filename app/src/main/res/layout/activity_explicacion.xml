@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Explicacion"
-    android:background="@color/yellow">
+    android:background="@color/smoothGreenMore">
 
     <TextView
         android:id="@+id/textView2"
@@ -14,6 +14,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/app_name"
         android:textColor="@color/purple"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +27,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/tit1"
         android:textColor="@color/purple"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -49,6 +51,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/tit2"
         android:textColor="@color/purple"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -72,6 +75,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/tit3"
         android:textColor="@color/purple"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,6 +101,7 @@
         android:text="@string/exp0"
         android:textAlignment="center"
         android:textColor="@color/smoothBlack"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -107,10 +112,11 @@
         android:layout_height="100dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="64dp"
+        android:background="@drawable/btn_background"
         android:onClick="volver"
         android:text="@string/atras"
-        android:background="@drawable/btn_background"
         android:textColor="@color/purple"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -120,10 +126,11 @@
         android:layout_height="100dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="100dp"
+        android:background="@drawable/btn_background"
         android:onClick="jugar"
         android:text="@string/jugar"
-        android:background="@drawable/btn_background"
         android:textColor="@color/purple"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
+    android:background="@color/smoothGreenMore"
     tools:context=".MainActivity">
 
     <TableLayout
@@ -26,36 +26,39 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/btn_background"
                 android:shadowDx="20"
                 android:shadowDy="20"
                 android:shadowRadius="20"
                 android:text="@string/bio"
-                android:background="@drawable/btn_background"
-                android:textColor="@color/purple"/>
+                android:textColor="@color/purple"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/info"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/btn_background"
                 android:shadowDx="20"
                 android:shadowDy="20"
                 android:shadowRadius="20"
                 android:text="@string/info"
-                android:background="@drawable/btn_background"
-                android:textColor="@color/purple"/>
+                android:textColor="@color/purple"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/sett"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@drawable/btn_background"
                 android:shadowDx="20"
                 android:shadowDy="20"
                 android:shadowRadius="20"
                 android:text="@string/settings"
-                android:background="@drawable/btn_background"
-                android:textColor="@color/purple"/>
+                android:textColor="@color/purple"
+                android:textSize="24sp" />
         </TableRow>
 
     </TableLayout>
@@ -65,13 +68,14 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginBottom="150dp"
+        android:background="@drawable/btn_background"
         android:onClick="jugar"
         android:shadowDx="20"
         android:shadowDy="20"
         android:shadowRadius="20"
         android:text="@string/jugar"
         android:textColor="@color/purple"
-        android:background="@drawable/btn_background"
+        android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -83,8 +87,10 @@
         android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/app_name"
+        android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/purple"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
